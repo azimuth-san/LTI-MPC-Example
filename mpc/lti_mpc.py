@@ -18,7 +18,7 @@ class LTIMPC:
         Predictive Control for Linear and Hybrid Systems, Cambridge University Press, 2017.
     """
 
-    def __init__(self, N, Q, R, A, B, F, f, G, g):
+    def __init__(self, N, Q, R, A, B, F, f, G, g, show_progress=False):
         """ Initialize.
 
         Parameters
@@ -59,7 +59,7 @@ class LTIMPC:
         # self.q_pre = B.T @ A  # equation (44b) of the reference[1]
         self.q_pre = B.T @ Q @ A  # equation (8.8) of the  reference[2]
 
-        cvxopt.solvers.options['show_progress'] = False
+        cvxopt.solvers.options['show_progress'] = show_progress
 
     @classmethod
     def augment_AB(cls, N, A, B):

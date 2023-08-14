@@ -16,6 +16,7 @@ def parse_argument():
     parser.add_argument('--cfg', default='cfg/cfg.yaml',
                         help='configration file')
     parser.add_argument('--output', default='result')
+    parser.add_argument('--show_progress', action='store_true')
 
     return parser.parse_args()
 
@@ -50,7 +51,9 @@ def main():
                  Q, R,
                  model.A, model.B,
                  F, f,
-                 G, g)
+                 G, g,
+                 args.show_progress
+                 )
 
     x = np.array(cfg['initial_state'])
 
