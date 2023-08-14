@@ -27,7 +27,7 @@ u_t, \quad T = 0.05 \\[5mm]
 $$
 
 $$
-F x \leq f, \quad F = 
+F x_t \leq f, \quad F = 
 \begin{bmatrix}
 1 & 0  \\
 -1 & 0  \\
@@ -41,7 +41,7 @@ F x \leq f, \quad F =
 10  \\
 10  \\
 \end{bmatrix} \\[2mm]
-\quad G u \leq g , \quad G = 
+\quad G u_t \leq g , \quad G = 
 \begin{bmatrix}
 1  \\
 -1 \\
